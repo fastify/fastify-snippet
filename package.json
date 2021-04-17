@@ -1,0 +1,26 @@
+{
+  "name": "fastify-snippet",
+  "version": "1.0.0",
+  "description": "Some VSCode snippet about Fastify",
+  "main": "index.js",
+  "scripts": {
+    "build:toc": "node toc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eomm/fastify-snippet.git"
+  },
+  "keywords": [],
+  "author": "Manuel Spigolon <behemoth89@gmail.com> (https://github.com/Eomm)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Eomm/fastify-snippet/issues"
+  },
+  "homepage": "https://github.com/Eomm/fastify-snippet#readme",
+  "dependencies": {
+    "fastify": "^3.14.2"
+  },
+  "devDependencies": {
+    "standard": "^16.0.3"
+  }
+}

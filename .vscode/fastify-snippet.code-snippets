@@ -1,0 +1,264 @@
+{
+  "fastify hello server": {
+    "scope": "javascript,typescript",
+    "prefix": "ffhello",
+    "body": [
+      "const fastify = require('fastify')({ logger: true })",
+      "fastify.get('/', async (request, reply) => {",
+      "  return { hello: 'world' }",
+      "})",
+      "fastify.post('/', async (request, reply) => {",
+      "  return request.body",
+      "})",
+      "fastify.listen(8080)"
+    ],
+    "description": "Create an hello world server"
+  },
+  "fastify register": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffregister",
+      "ffplugin"
+    ],
+    "body": [
+      "fastify.register(function plugin (instance, opts, next) {",
+      "  next()",
+      "})"
+    ],
+    "description": "Add an empty plugin"
+  },
+  "fastify print routes": {
+    "scope": "javascript,typescript",
+    "prefix": "ffprintroutes",
+    "body": [
+      "fastify.ready(() => {",
+      "  console.log(fastify.printRoutes())",
+      "})"
+    ],
+    "description": "Print to stdout the routes tree"
+  },
+  "fastify error handler": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "fferrorhandler"
+    ],
+    "body": [
+      "fastify.setErrorHandler(function (error, request, reply) {",
+      "  this.log.error(error)",
+      "  reply.status(500).send({ ok: false })",
+      "})"
+    ],
+    "description": "Add a custom error handler"
+  },
+  "fastify decorate server": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffdecorateserver"
+    ],
+    "body": [
+      "fastify.decorate('utility', function () {",
+      "  ${TM_SELECTED_TEXT:${0}}",
+      "})"
+    ],
+    "description": "Add a server decorator"
+  },
+  "fastify decorate request": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffdecoraterequest"
+    ],
+    "body": [
+      "fastify.decorateRequest('utility', function () {",
+      "  ${TM_SELECTED_TEXT:${0}}",
+      "})"
+    ],
+    "description": "Add a request decorator"
+  },
+  "fastify decorate reply": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffdecoratereply"
+    ],
+    "body": [
+      "fastify.decorateReply('utility', function () {",
+      "  ${TM_SELECTED_TEXT:${0}}",
+      "})"
+    ],
+    "description": "Add a reply decorator"
+  },
+  "fastify hook onRequest": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffonrequest",
+      "hookonrequest"
+    ],
+    "body": [
+      "fastify.addHook('onRequest', function hook (request, reply, done) {",
+      "  ${TM_SELECTED_TEXT:${0}}",
+      "  done()",
+      "})"
+    ],
+    "description": "Add an instance fastify onRequest hook"
+  },
+  "fastify hook preParsing": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffpreparsing",
+      "hookpreparsing"
+    ],
+    "body": [
+      "fastify.addHook('preParsing', function hook (request, reply, payload, done) {",
+      "  const newPayload = $0",
+      "  done(null, newPayload)",
+      "})"
+    ],
+    "description": "Add an instance fastify preParsing hook"
+  },
+  "fastify hook preValidation": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffprevalidation",
+      "hookprevalidation"
+    ],
+    "body": [
+      "fastify.addHook('preValidation', function hook (request, reply, done) {",
+      "  // request's fields are not been validated yet by the JSON Schema",
+      "  done()",
+      "})"
+    ],
+    "description": "Add an instance fastify preValidation hook"
+  },
+  "fastify hook preSerialization": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffpreserialization",
+      "hookpreserialization"
+    ],
+    "body": [
+      "fastify.addHook('preSerialization', function hook (request, reply, payload, done) {",
+      "  // the hook is NOT called if the payload is a string, a Buffer, a stream or null.",
+      "  const newPayload = $0",
+      "  done(null, newPayload)",
+      "})"
+    ],
+    "description": "Add an instance fastify preSerialization hook"
+  },
+  "fastify hook onError": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffonerror",
+      "hookonerror"
+    ],
+    "body": [
+      "fastify.addHook('onError', function hook (request, reply, error, done) {",
+      "  // Notice: unlike the other hooks, pass an error to the done function is not supported.",
+      "  done()",
+      "})"
+    ],
+    "description": "Add an instance fastify onError hook"
+  },
+  "fastify hook onSend": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffonsend",
+      "hookonsend"
+    ],
+    "body": [
+      "fastify.addHook('onSend', function hook (request, reply, payload, done) {",
+      "  // If you change the payload, you may only change it to a string, a Buffer, a stream, or null.",
+      "  const newPayload = $0",
+      "  done(null, newPayload)",
+      "})"
+    ],
+    "description": "Add an instance fastify onSend hook"
+  },
+  "fastify hook onResponse": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffonresponse",
+      "hookonresponse"
+    ],
+    "body": [
+      "fastify.addHook('onResponse', function hook (request, reply, done) {",
+      "  // The onResponse hook is executed when a response has been sent",
+      "  done()",
+      "})"
+    ],
+    "description": "Add an instance fastify onResponse hook"
+  },
+  "fastify hook onTimeout": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffontimeout",
+      "hookontimeout"
+    ],
+    "body": [
+      "fastify.addHook('onTimeout', function hook (request, reply, done) {",
+      "  // The onTimeout hook is executed when a request is timed out and the http socket has been hanged up",
+      "  done()",
+      "})"
+    ],
+    "description": "Add an instance fastify onTimeout hook"
+  },
+  "fastify application hook onReady": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffonready",
+      "hookonready"
+    ],
+    "body": [
+      "fastify.addHook('onReady', function hook (done) {",
+      "  done(null)",
+      "})"
+    ],
+    "description": "Add the fastify onReady application hook"
+  },
+  "fastify application hook onClose": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffonclose",
+      "hookonclose"
+    ],
+    "body": [
+      "fastify.addHook('onClose', function hook (instance done) {",
+      "  done()",
+      "})"
+    ],
+    "description": "Add the fastify onClose application hook"
+  },
+  "fastify application hook onRoute": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffonroute",
+      "hookonroute"
+    ],
+    "body": [
+      "fastify.addHook('onRoute', function hook (routeOptions) {",
+      "  // routeOptions.method",
+      "  // routeOptions.schema",
+      "  // routeOptions.url",
+      "  // routeOptions.path",
+      "  // routeOptions.routePath",
+      "  // routeOptions.bodyLimit",
+      "  // routeOptions.logLevel",
+      "  // routeOptions.logSerializers",
+      "  // routeOptions.prefix",
+      "  // routeOptions[hooksName] to get the hooks array",
+      "})"
+    ],
+    "description": "Add the fastify onRoute application hook"
+  },
+  "fastify application hook onRegister": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffonregister",
+      "hookonregister"
+    ],
+    "body": [
+      "fastify.addHook('onRegister', function hook (instance, opts) {",
+      "  // The hook will be executed before the registered code",
+      "})"
+    ],
+    "description": "Add the fastify onRegister application hook"
+  }
+}
