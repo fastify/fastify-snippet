@@ -13,13 +13,13 @@ const rows = content.map(([snippet, descriptor]) => {
 })
 
 const toc = [
-  'Snippet|Description|Type',
+  '\nSnippet|Description|Type',
   '---|---|---'
 ]
   .concat(rows)
   .join('\n')
 
 const regex = /(?<=<!-- ##TOC-BUILDER## -->)[\w\W]*(?=<!-- ##TOC-BUILDER-END## -->)/gm
-const updated = readme.replace(regex, toc)
+const updated = readme.replace(regex, toc + '\n')
 
 fs.writeFileSync('./README.md', updated)

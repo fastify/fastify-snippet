@@ -8,7 +8,8 @@ For more information, take a look a the [VSCode documentation](https://code.visu
 
 ## Snippet list
 
-<!-- ##TOC-BUILDER## -->Snippet|Description|Type
+<!-- ##TOC-BUILDER## -->
+Snippet|Description|Type
 ---|---|---
 fastify hello server|Create an hello world server|ffhello
 fastify register|Add an empty plugin|ffregister, ffplugin
@@ -28,7 +29,8 @@ fastify hook onTimeout|Add an instance fastify onTimeout hook|ffontimeout, hooko
 fastify application hook onReady|Add the fastify onReady application hook|ffonready, hookonready
 fastify application hook onClose|Add the fastify onClose application hook|ffonclose, hookonclose
 fastify application hook onRoute|Add the fastify onRoute application hook|ffonroute, hookonroute
-fastify application hook onRegister|Add the fastify onRegister application hook|ffonregister, hookonregister<!-- ##TOC-BUILDER-END## -->
+fastify application hook onRegister|Add the fastify onRegister application hook|ffonregister, hookonregister
+<!-- ##TOC-BUILDER-END## -->
 
 ## Contribute
 
