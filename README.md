@@ -1,8 +1,8 @@
 # fastify-snippet
 
-Some [VSCode](https://code.visualstudio.com/) snippet about Fastify
+Some [VSCode](https://code.visualstudio.com/) snippets about Fastify
 
-Look at the [`.vscode/fastify-snippet.code-snippets`](./.vscode/fastify-snippet.code-snippets) file and COPY-PASTE it in your project or your global configuration
+Install it from your VSCODE plugin page!
 
 For more information, take a look a the [VSCode documentation](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
 

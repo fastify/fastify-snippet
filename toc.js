@@ -4,7 +4,7 @@ const fs = require('fs')
 
 const readme = fs.readFileSync('./README.md', 'utf8')
 
-const snippet = JSON.parse(fs.readFileSync('./.vscode/fastify-snippet.code-snippets'))
+const snippet = require('./snippets/snippets-js.json')
 const content = Object.entries(snippet)
 
 const rows = content.map(([snippet, descriptor]) => {
