@@ -1,11 +1,14 @@
 {
-  "name": "fastify-snippet",
+  "name": "fastify-snippets",
   "version": "1.0.0",
+  "icon": "images/logo-256.png",
   "displayName": "Fastify Snippets",
   "description": "Make your Fastify developing even faster",
   "publisher": "fastify",
   "scripts": {
     "build:toc": "node toc",
+    "vscode:login": "vsce login fastify",
+    "vscode:publish": "vsce publish",
     "test": "tap --no-timeout test/**.test.js"
   },
   "engines": {
