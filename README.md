@@ -1,8 +1,8 @@
-# fastify-snippet
+# fastify-snippets
 
-Some [VSCode](https://code.visualstudio.com/) snippets about Fastify
+The official [Fastify](https://www.fastify.io/) [VSCode](https://code.visualstudio.com/) snippets! 
 
-Install it from your VSCODE plugin page!
+Install it from the [VSCode marketplace](https://marketplace.visualstudio.com/items?itemName=fastify.fastify-snippets)!
 
 For more information, take a look a the [VSCode documentation](https://code.visualstudio.com/docs/editor/userdefinedsnippets)
 
