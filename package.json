@@ -22,11 +22,11 @@
     "snippets": [
       {
         "language": "javascript",
-        "path": "./snippets-js.json"
+        "path": "./snippets/snippets-js.json"
       },
       {
         "language": "typescript",
-        "path": "./snippets-ts.json"
+        "path": "./snippets/snippets-ts.json"
       }
     ]
   },
