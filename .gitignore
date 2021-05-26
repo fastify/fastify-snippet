@@ -106,3 +106,4 @@ dist
 package-lock.json
 
 .vscode-test/*
+*.vsix
