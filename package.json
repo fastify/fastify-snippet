@@ -1,6 +1,6 @@
 {
   "name": "fastify-snippets",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "icon": "images/logo-256.png",
   "displayName": "Fastify Snippets",
   "description": "Make your Fastify developing even faster",
