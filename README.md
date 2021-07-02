@@ -21,6 +21,7 @@ fastify decorate reply|Add a reply decorator|ffdecoratereply
 fastify hook onRequest|Add an instance fastify onRequest hook|ffonrequest, hookonrequest
 fastify hook preParsing|Add an instance fastify preParsing hook|ffpreparsing, hookpreparsing
 fastify hook preValidation|Add an instance fastify preValidation hook|ffprevalidation, hookprevalidation
+fastify hook preHandler|Add an instance fastify preHandler hook|ffprehandler, hookprehandler
 fastify hook preSerialization|Add an instance fastify preSerialization hook|ffpreserialization, hookpreserialization
 fastify hook onError|Add an instance fastify onError hook|ffonerror, hookonerror
 fastify hook onSend|Add an instance fastify onSend hook|ffonsend, hookonsend
