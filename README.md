@@ -31,6 +31,7 @@ fastify application hook onClose|Add the fastify onClose application hook|ffoncl
 fastify application hook onRoute|Add the fastify onRoute application hook|ffonroute, hookonroute
 fastify application hook onRegister|Add the fastify onRegister application hook|ffonregister, hookonregister
 fastify add schema|Add a shared JSON schema to fastify|ffaddschema, ffsharedschema, ffjsonschema, ffschema
+fastify not found handler|Add the default 404 not found handler|ffnotfound, ff404
 <!-- ##TOC-BUILDER-END## -->
 
 ## Contribute
