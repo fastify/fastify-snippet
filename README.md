@@ -38,3 +38,14 @@ fastify not found handler|Add the default 404 not found handler|ffnotfound, ff40
 ## Contribute
 
 Feel free to open an issue if you have suggestion o new ideas to improve this snippet!
+
+
+## How to release
+
+First, you must be added into the [Fastify publisher](https://marketplace.visualstudio.com/manage/publishers/fastify) to complete succesfully these steps.
+
+- Generate a [personal access token](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token)
+- Run `npm run vscode:login`
+- Manually bump the version in the `package.json`
+- Run `npm run vscode:pack`
+- Run `npm run vscode:publish`
