@@ -40,6 +40,10 @@ fastify not found handler|Add the default 404 not found handler|ffnotfound, ff40
 Feel free to open an issue if you have suggestion o new ideas to improve this snippet!
 
 
+## How to test
+
+From VSCODE you can run the `Extension` launcher to test your snippet inside an headless VSCODE instance.
+
 ## How to release
 
 First, you must be added into the [Fastify publisher](https://marketplace.visualstudio.com/manage/publishers/fastify) to complete succesfully these steps.
