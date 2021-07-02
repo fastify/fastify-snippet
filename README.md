@@ -30,6 +30,7 @@ fastify application hook onReady|Add the fastify onReady application hook|ffonre
 fastify application hook onClose|Add the fastify onClose application hook|ffonclose, hookonclose
 fastify application hook onRoute|Add the fastify onRoute application hook|ffonroute, hookonroute
 fastify application hook onRegister|Add the fastify onRegister application hook|ffonregister, hookonregister
+fastify add schema|Add a shared JSON schema to fastify|ffaddschema, ffsharedschema, ffjsonschema, ffschema
 <!-- ##TOC-BUILDER-END## -->
 
 ## Contribute
