@@ -128,6 +128,20 @@
     ],
     "description": "Add an instance fastify preValidation hook"
   },
+  "fastify hook preHandler": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffprehandler",
+      "hookprehandler"
+    ],
+    "body": [
+      "fastify.addHook('preHandler', function hook (request, reply, done) {",
+      "  $0",
+      "  done(null)",
+      "})"
+    ],
+    "description": "Add an instance fastify preHandler hook"
+  },
   "fastify hook preSerialization": {
     "scope": "javascript,typescript",
     "prefix": [
