@@ -260,5 +260,18 @@
       "})"
     ],
     "description": "Add the fastify onRegister application hook"
+  },
+  "fastify add schema": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffaddschema",
+      "ffsharedschema",
+      "ffjsonschema",
+      "ffschema"
+    ],
+    "body": [
+      "fastify.addSchema($0)"
+    ],
+    "description": "Add a shared JSON schema to fastify"
   }
 }
