@@ -3,14 +3,14 @@
     "scope": "javascript,typescript",
     "prefix": "ffhello",
     "body": [
-      "const fastify = require('fastify')({ logger: true })",
-      "fastify.get('/', async (request, reply) => {",
+      "const app = require('fastify')({ logger: true })",
+      "app.get('/', async (request, reply) => {",
       "  return { hello: 'world' }",
       "})",
-      "fastify.post('/', async (request, reply) => {",
+      "app.post('/', async (request, reply) => {",
       "  return request.body",
       "})",
-      "fastify.listen(8080)"
+      "app.listen({ port: 8080 })"
     ],
     "description": "Create an hello world server"
   },
@@ -21,7 +21,7 @@
       "ffplugin"
     ],
     "body": [
-      "fastify.register(function plugin (instance, opts, next) {",
+      "app.register(function plugin (app, opts, next) {",
       "  next()",
       "})"
     ],
@@ -31,8 +31,8 @@
     "scope": "javascript,typescript",
     "prefix": "ffprintroutes",
     "body": [
-      "fastify.ready(() => {",
-      "  console.log(fastify.printRoutes())",
+      "app.ready(() => {",
+      "  console.log(app.printRoutes())",
       "})"
     ],
     "description": "Print to stdout the routes tree"
@@ -43,7 +43,7 @@
       "fferrorhandler"
     ],
     "body": [
-      "fastify.setErrorHandler(function (error, request, reply) {",
+      "app.setErrorHandler(function (error, request, reply) {",
       "  this.log.error(error)",
       "  reply.status(500).send({ ok: false })",
       "})"
@@ -56,7 +56,7 @@
       "ffdecorateserver"
     ],
     "body": [
-      "fastify.decorate('utility', function () {",
+      "app.decorate('utility', function () {",
       "  ${TM_SELECTED_TEXT:${0}}",
       "})"
     ],
@@ -68,7 +68,7 @@
       "ffdecoraterequest"
     ],
     "body": [
-      "fastify.decorateRequest('utility', function () {",
+      "app.decorateRequest('utility', function () {",
       "  ${TM_SELECTED_TEXT:${0}}",
       "})"
     ],
@@ -80,7 +80,7 @@
       "ffdecoratereply"
     ],
     "body": [
-      "fastify.decorateReply('utility', function () {",
+      "app.decorateReply('utility', function () {",
       "  ${TM_SELECTED_TEXT:${0}}",
       "})"
     ],
@@ -93,7 +93,7 @@
       "hookonrequest"
     ],
     "body": [
-      "fastify.addHook('onRequest', function hook (request, reply, done) {",
+      "app.addHook('onRequest', function hook (request, reply, done) {",
       "  ${TM_SELECTED_TEXT:${0}}",
       "  done()",
       "})"
@@ -107,7 +107,7 @@
       "hookpreparsing"
     ],
     "body": [
-      "fastify.addHook('preParsing', function hook (request, reply, payload, done) {",
+      "app.addHook('preParsing', function hook (request, reply, payload, done) {",
       "  const newPayload = $0",
       "  done(null, newPayload)",
       "})"
@@ -121,7 +121,7 @@
       "hookprevalidation"
     ],
     "body": [
-      "fastify.addHook('preValidation', function hook (request, reply, done) {",
+      "app.addHook('preValidation', function hook (request, reply, done) {",
       "  // request's fields are not been validated yet by the JSON Schema",
       "  done()",
       "})"
@@ -135,7 +135,7 @@
       "hookprehandler"
     ],
     "body": [
-      "fastify.addHook('preHandler', function hook (request, reply, done) {",
+      "app.addHook('preHandler', function hook (request, reply, done) {",
       "  $0",
       "  done(null)",
       "})"
@@ -149,7 +149,7 @@
       "hookpreserialization"
     ],
     "body": [
-      "fastify.addHook('preSerialization', function hook (request, reply, payload, done) {",
+      "app.addHook('preSerialization', function hook (request, reply, payload, done) {",
       "  // the hook is NOT called if the payload is a string, a Buffer, a stream or null.",
       "  const newPayload = $0",
       "  done(null, newPayload)",
@@ -164,7 +164,7 @@
       "hookonerror"
     ],
     "body": [
-      "fastify.addHook('onError', function hook (request, reply, error, done) {",
+      "app.addHook('onError', function hook (request, reply, error, done) {",
       "  // Notice: unlike the other hooks, pass an error to the done function is not supported.",
       "  done()",
       "})"
@@ -178,7 +178,7 @@
       "hookonsend"
     ],
     "body": [
-      "fastify.addHook('onSend', function hook (request, reply, payload, done) {",
+      "app.addHook('onSend', function hook (request, reply, payload, done) {",
       "  // If you change the payload, you may only change it to a string, a Buffer, a stream, or null.",
       "  const newPayload = $0",
       "  done(null, newPayload)",
@@ -193,7 +193,7 @@
       "hookonresponse"
     ],
     "body": [
-      "fastify.addHook('onResponse', function hook (request, reply, done) {",
+      "app.addHook('onResponse', function hook (request, reply, done) {",
       "  // The onResponse hook is executed when a response has been sent",
       "  done()",
       "})"
@@ -207,7 +207,7 @@
       "hookontimeout"
     ],
     "body": [
-      "fastify.addHook('onTimeout', function hook (request, reply, done) {",
+      "app.addHook('onTimeout', function hook (request, reply, done) {",
       "  // The onTimeout hook is executed when a request is timed out and the http socket has been hanged up",
       "  done()",
       "})"
@@ -221,7 +221,7 @@
       "hookonready"
     ],
     "body": [
-      "fastify.addHook('onReady', function hook (done) {",
+      "app.addHook('onReady', function hook (done) {",
       "  done(null)",
       "})"
     ],
@@ -234,7 +234,7 @@
       "hookonclose"
     ],
     "body": [
-      "fastify.addHook('onClose', function hook (instance done) {",
+      "app.addHook('onClose', function hook (app, done) {",
       "  done()",
       "})"
     ],
@@ -247,7 +247,7 @@
       "hookonroute"
     ],
     "body": [
-      "fastify.addHook('onRoute', function hook (routeOptions) {",
+      "app.addHook('onRoute', function hook (routeOptions) {",
       "  // routeOptions.method",
       "  // routeOptions.schema",
       "  // routeOptions.url",
@@ -269,7 +269,7 @@
       "hookonregister"
     ],
     "body": [
-      "fastify.addHook('onRegister', function hook (instance, opts) {",
+      "app.addHook('onRegister', function hook (app, opts) {",
       "  // The hook will be executed before the registered code",
       "})"
     ],
@@ -284,7 +284,7 @@
       "ffschema"
     ],
     "body": [
-      "fastify.addSchema($0)"
+      "app.addSchema($0)"
     ],
     "description": "Add a shared JSON schema to fastify"
   },
@@ -295,7 +295,7 @@
       "ff404"
     ],
     "body": [
-      "fastify.setNotFoundHandler(function basic404(request, reply) {",
+      "app.setNotFoundHandler(function basic404(request, reply) {",
       "  const { url, method } = request.raw",
       "  const message = `Route ${method}:${url} not found`",
       "  request.log.info(message)",
