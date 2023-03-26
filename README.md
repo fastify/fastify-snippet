@@ -54,3 +54,4 @@ First, you must be added into the [Fastify publisher](https://marketplace.visual
 - Manually bump the version in the `package.json`
 - Run `npm run vscode:pack`
 - Run `npm run vscode:publish`
+- Commit&Push the new version to the `main` branch
