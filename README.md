@@ -49,7 +49,8 @@ From VSCODE you can run the `Extension` launcher to test your snippet inside an 
 
 First, you must be added into the [Fastify publisher](https://marketplace.visualstudio.com/manage/publishers/fastify) to complete succesfully these steps.
 
-- Generate a [personal access token](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token)
+- Access to the [Fastify org on Azure](https://dev.azure.com/fastify/)
+- Generate a [personal access token](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#get-a-personal-access-token) (_check the `show all scope` small button-link_)
 - Run `npm run vscode:login`
 - Manually bump the version in the `package.json`
 - Run `npm run vscode:pack`

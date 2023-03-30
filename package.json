@@ -1,6 +1,6 @@
 {
   "name": "fastify-snippets",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "icon": "images/logo-256.png",
   "displayName": "Fastify Snippets",
   "description": "Make your Fastify developing even faster",
@@ -47,5 +47,8 @@
   "bugs": {
     "url": "https://github.com/fastify/fastify-snippet/issues"
   },
-  "homepage": "https://github.com/fastify/fastify-snippet#readme"
+  "homepage": "https://github.com/fastify/fastify-snippet#readme",
+  "dependencies": {
+    "@vscode/vsce": "^2.18.0"
+  }
 }
