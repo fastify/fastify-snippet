@@ -171,6 +171,20 @@
     ],
     "description": "Add an instance fastify onError hook"
   },
+  "fastify hook onRequestAbort": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffonrequestabort",
+      "hookonrequestabort"
+    ],
+    "body": [
+      "app.addHook('onRequestAbort', function hook (request, reply, done) {",
+      "  // Notice: run when a client closes the connection before. Therefore, you will not be able to send data to the client.",
+      "  done()",
+      "})"
+    ],
+    "description": "Add an instance fastify onRequestAbort hook"
+  },
   "fastify hook onSend": {
     "scope": "javascript,typescript",
     "prefix": [

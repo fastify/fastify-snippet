@@ -24,6 +24,7 @@ fastify hook preValidation|Add an instance fastify preValidation hook|ffprevalid
 fastify hook preHandler|Add an instance fastify preHandler hook|ffprehandler, hookprehandler
 fastify hook preSerialization|Add an instance fastify preSerialization hook|ffpreserialization, hookpreserialization
 fastify hook onError|Add an instance fastify onError hook|ffonerror, hookonerror
+fastify hook onRequestAbort|Add an instance fastify onRequestAbort hook|ffonrequestabort, hookonrequestabort
 fastify hook onSend|Add an instance fastify onSend hook|ffonsend, hookonsend
 fastify hook onResponse|Add an instance fastify onResponse hook|ffonresponse, hookonresponse
 fastify hook onTimeout|Add an instance fastify onTimeout hook|ffontimeout, hookontimeout
@@ -53,3 +54,4 @@ First, you must be added into the [Fastify publisher](https://marketplace.visual
 - Manually bump the version in the `package.json`
 - Run `npm run vscode:pack`
 - Run `npm run vscode:publish`
+- Commit&Push the new version to the `main` branch
