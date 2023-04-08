@@ -93,9 +93,8 @@
       "hookonrequest"
     ],
     "body": [
-      "app.addHook('onRequest', function hook (request, reply, done) {",
+      "app.addHook('onRequest', async function hook (request, reply) {",
       "  ${TM_SELECTED_TEXT:${0}}",
-      "  done()",
       "})"
     ],
     "description": "Add an instance fastify onRequest hook"
@@ -107,9 +106,9 @@
       "hookpreparsing"
     ],
     "body": [
-      "app.addHook('preParsing', function hook (request, reply, payload, done) {",
+      "app.addHook('preParsing', async function hook (request, reply, payload) {",
       "  const newPayload = $0",
-      "  done(null, newPayload)",
+      "  return newPayload",
       "})"
     ],
     "description": "Add an instance fastify preParsing hook"
@@ -121,9 +120,8 @@
       "hookprevalidation"
     ],
     "body": [
-      "app.addHook('preValidation', function hook (request, reply, done) {",
+      "app.addHook('preValidation', async function hook (request, reply) {",
       "  // request's fields are not been validated yet by the JSON Schema",
-      "  done()",
       "})"
     ],
     "description": "Add an instance fastify preValidation hook"
@@ -135,9 +133,8 @@
       "hookprehandler"
     ],
     "body": [
-      "app.addHook('preHandler', function hook (request, reply, done) {",
+      "app.addHook('preHandler', async function hook (request, reply) {",
       "  $0",
-      "  done(null)",
       "})"
     ],
     "description": "Add an instance fastify preHandler hook"
@@ -149,10 +146,10 @@
       "hookpreserialization"
     ],
     "body": [
-      "app.addHook('preSerialization', function hook (request, reply, payload, done) {",
+      "app.addHook('preSerialization', async function hook (request, reply, payload) {",
       "  // the hook is NOT called if the payload is a string, a Buffer, a stream or null.",
       "  const newPayload = $0",
-      "  done(null, newPayload)",
+      "  return newPayload",
       "})"
     ],
     "description": "Add an instance fastify preSerialization hook"
@@ -164,9 +161,8 @@
       "hookonerror"
     ],
     "body": [
-      "app.addHook('onError', function hook (request, reply, error, done) {",
-      "  // Notice: unlike the other hooks, pass an error to the done function is not supported.",
-      "  done()",
+      "app.addHook('onError', async function hook (request, reply, error) {",
+      "  // You should not use this hook to update the error",
       "})"
     ],
     "description": "Add an instance fastify onError hook"
@@ -178,9 +174,8 @@
       "hookonrequestabort"
     ],
     "body": [
-      "app.addHook('onRequestAbort', function hook (request, reply, done) {",
+      "app.addHook('onRequestAbort', async function hook (request, reply) {",
       "  // Notice: run when a client closes the connection before. Therefore, you will not be able to send data to the client.",
-      "  done()",
       "})"
     ],
     "description": "Add an instance fastify onRequestAbort hook"
@@ -192,10 +187,10 @@
       "hookonsend"
     ],
     "body": [
-      "app.addHook('onSend', function hook (request, reply, payload, done) {",
+      "app.addHook('onSend', asyn cfunction hook (request, reply, payload) {",
       "  // If you change the payload, you may only change it to a string, a Buffer, a stream, or null.",
       "  const newPayload = $0",
-      "  done(null, newPayload)",
+      "  return newPayload",
       "})"
     ],
     "description": "Add an instance fastify onSend hook"
@@ -207,9 +202,8 @@
       "hookonresponse"
     ],
     "body": [
-      "app.addHook('onResponse', function hook (request, reply, done) {",
+      "app.addHook('onResponse', async function hook (request, reply) {",
       "  // The onResponse hook is executed when a response has been sent",
-      "  done()",
       "})"
     ],
     "description": "Add an instance fastify onResponse hook"
@@ -221,9 +215,8 @@
       "hookontimeout"
     ],
     "body": [
-      "app.addHook('onTimeout', function hook (request, reply, done) {",
+      "app.addHook('onTimeout', async function hook (request, reply) {",
       "  // The onTimeout hook is executed when a request is timed out and the http socket has been hanged up",
-      "  done()",
       "})"
     ],
     "description": "Add an instance fastify onTimeout hook"
@@ -235,8 +228,8 @@
       "hookonready"
     ],
     "body": [
-      "app.addHook('onReady', function hook (done) {",
-      "  done(null)",
+      "app.addHook('onReady', async function hook () {",
+      "",
       "})"
     ],
     "description": "Add the fastify onReady application hook"
@@ -248,8 +241,8 @@
       "hookonclose"
     ],
     "body": [
-      "app.addHook('onClose', function hook (app, done) {",
-      "  done()",
+      "app.addHook('onClose', async function hook (app) {",
+      "",
       "})"
     ],
     "description": "Add the fastify onClose application hook"
