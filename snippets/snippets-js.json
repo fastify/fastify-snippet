@@ -187,7 +187,7 @@
       "hookonsend"
     ],
     "body": [
-      "app.addHook('onSend', asyn cfunction hook (request, reply, payload) {",
+      "app.addHook('onSend', async function hook (request, reply, payload) {",
       "  // If you change the payload, you may only change it to a string, a Buffer, a stream, or null.",
       "  const newPayload = $0",
       "  return newPayload",
