@@ -234,6 +234,19 @@
     ],
     "description": "Add the fastify onReady application hook"
   },
+  "fastify application hook preClose": {
+    "scope": "javascript,typescript",
+    "prefix": [
+      "ffpreclose",
+      "hookpreclose"
+    ],
+    "body": [
+      "app.addHook('preClose', async function hook () {",
+      "",
+      "})"
+    ],
+    "description": "Add the fastify preClose application hook"
+  },
   "fastify application hook onClose": {
     "scope": "javascript,typescript",
     "prefix": [
