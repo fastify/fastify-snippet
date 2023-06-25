@@ -23,13 +23,13 @@ fastify hook preParsing|Add an instance fastify preParsing hook|ffpreparsing, ho
 fastify hook preValidation|Add an instance fastify preValidation hook|ffprevalidation, hookprevalidation
 fastify hook preHandler|Add an instance fastify preHandler hook|ffprehandler, hookprehandler
 fastify hook preSerialization|Add an instance fastify preSerialization hook|ffpreserialization, hookpreserialization
-fastify hook peClose|Add an instance fastify preClose hook|ffpreclose, hookpreclose
 fastify hook onError|Add an instance fastify onError hook|ffonerror, hookonerror
 fastify hook onRequestAbort|Add an instance fastify onRequestAbort hook|ffonrequestabort, hookonrequestabort
 fastify hook onSend|Add an instance fastify onSend hook|ffonsend, hookonsend
 fastify hook onResponse|Add an instance fastify onResponse hook|ffonresponse, hookonresponse
 fastify hook onTimeout|Add an instance fastify onTimeout hook|ffontimeout, hookontimeout
 fastify application hook onReady|Add the fastify onReady application hook|ffonready, hookonready
+fastify application hook preClose|Add the fastify preClose application hook|ffpreclose, hookpreclose
 fastify application hook onClose|Add the fastify onClose application hook|ffonclose, hookonclose
 fastify application hook onRoute|Add the fastify onRoute application hook|ffonroute, hookonroute
 fastify application hook onRegister|Add the fastify onRegister application hook|ffonregister, hookonregister

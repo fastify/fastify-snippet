@@ -107,3 +107,4 @@ package-lock.json
 
 .vscode-test/*
 *.vsix
+.vscode/settings*
