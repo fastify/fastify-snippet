@@ -1,9 +1,10 @@
 {
 	"fastify hello server": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": "ffhello",
 		"body": [
-			"const app = require('fastify')({ logger: true })",
+			"import fastify from 'fastify'",
+			"const app = fastify({ logger: true })",
 			"app.get('/', async (request, reply) => {",
 			"  return { hello: 'world' }",
 			"})",
