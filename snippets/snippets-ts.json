@@ -16,7 +16,7 @@
 		"description": "Create an hello world server"
 	},
 	"fastify register": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffregister", "ffplugin"],
 		"body": [
 			"app.register(function plugin (app, opts, next) {",
@@ -26,13 +26,13 @@
 		"description": "Add an empty plugin"
 	},
 	"fastify print routes": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": "ffprintroutes",
 		"body": ["app.ready(() => {", "  console.log(app.printRoutes())", "})"],
 		"description": "Print to stdout the routes tree"
 	},
 	"fastify error handler": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["fferrorhandler"],
 		"body": [
 			"app.setErrorHandler(function (error, request, reply) {",
@@ -43,7 +43,7 @@
 		"description": "Add a custom error handler"
 	},
 	"fastify decorate server": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffdecorateserver"],
 		"body": [
 			"app.decorate('utility', function () {",
@@ -53,7 +53,7 @@
 		"description": "Add a server decorator"
 	},
 	"fastify decorate request": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffdecoraterequest"],
 		"body": [
 			"app.decorateRequest('utility', function () {",
@@ -63,7 +63,7 @@
 		"description": "Add a request decorator"
 	},
 	"fastify decorate reply": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffdecoratereply"],
 		"body": [
 			"app.decorateReply('utility', function () {",
@@ -73,7 +73,7 @@
 		"description": "Add a reply decorator"
 	},
 	"fastify hook onRequest": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffonrequest", "hookonrequest"],
 		"body": [
 			"app.addHook('onRequest', async function hook (request, reply) {",
@@ -83,7 +83,7 @@
 		"description": "Add an instance fastify onRequest hook"
 	},
 	"fastify hook preParsing": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffpreparsing", "hookpreparsing"],
 		"body": [
 			"app.addHook('preParsing', async function hook (request, reply, payload) {",
@@ -94,7 +94,7 @@
 		"description": "Add an instance fastify preParsing hook"
 	},
 	"fastify hook preValidation": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffprevalidation", "hookprevalidation"],
 		"body": [
 			"app.addHook('preValidation', async function hook (request, reply) {",
@@ -104,7 +104,7 @@
 		"description": "Add an instance fastify preValidation hook"
 	},
 	"fastify hook preHandler": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffprehandler", "hookprehandler"],
 		"body": [
 			"app.addHook('preHandler', async function hook (request, reply) {",
@@ -114,7 +114,7 @@
 		"description": "Add an instance fastify preHandler hook"
 	},
 	"fastify hook preSerialization": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffpreserialization", "hookpreserialization"],
 		"body": [
 			"app.addHook('preSerialization', async function hook (request, reply, payload) {",
@@ -126,7 +126,7 @@
 		"description": "Add an instance fastify preSerialization hook"
 	},
 	"fastify hook onError": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffonerror", "hookonerror"],
 		"body": [
 			"app.addHook('onError', async function hook (request, reply, error) {",
@@ -136,7 +136,7 @@
 		"description": "Add an instance fastify onError hook"
 	},
 	"fastify hook onRequestAbort": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffonrequestabort", "hookonrequestabort"],
 		"body": [
 			"app.addHook('onRequestAbort', async function hook (request, reply) {",
@@ -146,7 +146,7 @@
 		"description": "Add an instance fastify onRequestAbort hook"
 	},
 	"fastify hook onSend": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffonsend", "hookonsend"],
 		"body": [
 			"app.addHook('onSend', async function hook (request, reply, payload) {",
@@ -158,7 +158,7 @@
 		"description": "Add an instance fastify onSend hook"
 	},
 	"fastify hook onResponse": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffonresponse", "hookonresponse"],
 		"body": [
 			"app.addHook('onResponse', async function hook (request, reply) {",
@@ -168,7 +168,7 @@
 		"description": "Add an instance fastify onResponse hook"
 	},
 	"fastify hook onTimeout": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffontimeout", "hookontimeout"],
 		"body": [
 			"app.addHook('onTimeout', async function hook (request, reply) {",
@@ -178,25 +178,25 @@
 		"description": "Add an instance fastify onTimeout hook"
 	},
 	"fastify application hook onReady": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffonready", "hookonready"],
 		"body": ["app.addHook('onReady', async function hook () {", "", "})"],
 		"description": "Add the fastify onReady application hook"
 	},
 	"fastify application hook preClose": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffpreclose", "hookpreclose"],
 		"body": ["app.addHook('preClose', async function hook () {", "", "})"],
 		"description": "Add the fastify preClose application hook"
 	},
 	"fastify application hook onClose": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffonclose", "hookonclose"],
 		"body": ["app.addHook('onClose', async function hook (app) {", "", "})"],
 		"description": "Add the fastify onClose application hook"
 	},
 	"fastify application hook onRoute": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffonroute", "hookonroute"],
 		"body": [
 			"app.addHook('onRoute', function hook (routeOptions) {",
@@ -215,7 +215,7 @@
 		"description": "Add the fastify onRoute application hook"
 	},
 	"fastify application hook onRegister": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffonregister", "hookonregister"],
 		"body": [
 			"app.addHook('onRegister', function hook (app, opts) {",
@@ -225,13 +225,13 @@
 		"description": "Add the fastify onRegister application hook"
 	},
 	"fastify add schema": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffaddschema", "ffsharedschema", "ffjsonschema", "ffschema"],
 		"body": ["app.addSchema($0)"],
 		"description": "Add a shared JSON schema to fastify"
 	},
 	"fastify not found handler": {
-		"scope": "javascript,typescript",
+		"scope": "typescript",
 		"prefix": ["ffnotfound", "ff404"],
 		"body": [
 			"app.setNotFoundHandler(function basic404(request, reply) {",
