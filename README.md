@@ -29,6 +29,7 @@ fastify hook onSend|Add an instance fastify onSend hook|ffonsend, hookonsend
 fastify hook onResponse|Add an instance fastify onResponse hook|ffonresponse, hookonresponse
 fastify hook onTimeout|Add an instance fastify onTimeout hook|ffontimeout, hookontimeout
 fastify application hook onReady|Add the fastify onReady application hook|ffonready, hookonready
+fastify application hook onListen|Add the fastify onListen application hook|ffonlisten, hookonlisten
 fastify application hook preClose|Add the fastify preClose application hook|ffpreclose, hookpreclose
 fastify application hook onClose|Add the fastify onClose application hook|ffonclose, hookonclose
 fastify application hook onRoute|Add the fastify onRoute application hook|ffonroute, hookonroute
