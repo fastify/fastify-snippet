@@ -183,6 +183,19 @@
 		"body": ["app.addHook('onReady', async function hook () {", "", "})"],
 		"description": "Add the fastify onReady application hook"
 	},
+	"fastify application hook onListen": {
+		"scope": "typescript",
+		"prefix": [
+			"ffonlisten",
+			"hookonlisten"
+		],
+		"body": [
+			"app.addHook('onListen', async function hook () {",
+			"",
+			"})"
+		],
+		"description": "Add the fastify onListen application hook"
+	},
 	"fastify application hook preClose": {
 		"scope": "typescript",
 		"prefix": ["ffpreclose", "hookpreclose"],
