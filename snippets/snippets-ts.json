@@ -19,8 +19,8 @@
 		"scope": "typescript",
 		"prefix": ["ffregister", "ffplugin"],
 		"body": [
-			"app.register(function plugin (app, opts, next) {",
-			"  next()",
+			"app.register(async function plugin (app, opts) {",
+			"  ${0}",
 			"})"
 		],
 		"description": "Add an empty plugin"
