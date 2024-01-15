@@ -1,6 +1,6 @@
 # fastify-snippets
 
-The official [Fastify](https://www.fastify.io/) [VSCode](https://code.visualstudio.com/) snippets! 
+The official [Fastify](https://fastify.dev/) [VSCode](https://code.visualstudio.com/) snippets! 
 
 Install it from the [VSCode marketplace](https://marketplace.visualstudio.com/items?itemName=fastify.fastify-snippets)!
 
