@@ -10,7 +10,7 @@
     "vscode:login": "vsce login fastify",
     "vscode:pack": "vsce package",
     "vscode:publish": "vsce publish",
-    "test": "tap --no-timeout test/**.test.js"
+    "test": "node --test"
   },
   "engines": {
     "vscode": "^1.40.0"
